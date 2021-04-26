@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <style>
+
+            div#aa
+            {
+                position: absolute;
+                background: rgb(175, 75, 240);
+ 
+                width: 250px;       /*広さ*/
+                height: 250px;      /*高さ*/
+                border-radius: 200px;       
+ 
+                animation-name: potari;      /*跳ね上がる*/
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;        /*引き続きループ*/
+                
+                transition: width 7s;
+                
+            }
+
+            div:hover
+            {
+                width: 500px;
+            }
+ 
+            @keyframes myanim
+            {
+                0% {left: 500px; top: 50px;}
+                50% {left: 500px; top: 50px;}
+                100% {left: 500px; top: 50px;}
+            }
+
+            @keyframes potari
+            {
+                0%, 100%
+                {
+                    left: 0px;
+                    bottom: 0px;
+                    animation-timing-function: ease-out;
+                }
+
+                50%
+                {
+                    left: 0px;
+                    bottom: 500px;
+                    animation-timing-function: ease-in;
+                }
+            }
+            
+        </style>
+    
+</head>
+   
+    <body>
+        <div id="aa"></div>
+    </body>
+
+</html>
